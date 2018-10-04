@@ -7,7 +7,7 @@
         this.y = y || 0;
         this.width = width || 20;
         this.height = height || 20;
-        this.color = color || "darkgreen";
+        this.color = color || "green";
     }
     //为原型添加初始化的方法
     Food.prototype.init = function (map) {

@@ -11,10 +11,10 @@
         //初始化游戏
         this.food.init(this.map);
         this.snake.init(this.map);
-        this.runSnake.init(this.map,this.food);
+        this.runSnake(this.food, this.map);
         this.bindKey();    //调用按键操作小蛇运动方向的方法
     };
-    Game.prototype.runSnake = function (map,food) {
+    Game.prototype.runSnake = function (food, map) {
         //添加定时器，小蛇自动移动
         var time = setInterval(function () {
             this.snake.move(food,map);
@@ -44,7 +44,8 @@
                 break;
                 case 39:this.snake.direction = "right";
                 break;
-                case 40:this.snake.direction = "left";
+                case 40:
+                    this.snake.direction = "bottom";
                 break;
             }
         }.bind(that),false);

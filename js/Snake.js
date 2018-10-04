@@ -4,12 +4,12 @@
     function Snake(width, height, direction) {
         this.width = width || 20;
         this.height = height || 20;
-        this.direction = direction || "right";
         this.body = [
             {x:3,y:2,color:"red"},
             {x:2,y:2,color:"orange"},
             {x:1,y:2,color:"orange"}
         ];
+        this.direction = direction || "right";
     }
     //为原型添加方法--初始化
     Snake.prototype.init = function (map) {
@@ -21,9 +21,9 @@
             div.style.position = "absolute";
             div.style.width = this.width + "px";
             div.style.height = this.height + "px";
+            div.style.left = this.width * obj.x + "px";
+            div.style.top = this.height * obj.y + "px";
             div.style.backgroundColor = obj.color;
-            div.style.left = this.width*obj.x + "px";
-            div.style.top = this.height*obj.y + "px";
             elements.push(div);
         }
     };
