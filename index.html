@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>贪吃蛇</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.map{
+				width: 1200px;
+				height: 600px;
+				background: #cecece;
+				position: relative;
+				margin: 0 auto;
+			}
+			p{
+				text-align: center;
+				font-size: 18px;
+				color: blueviolet;
+				line-height: 36px;
+				height: 36px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>贪吃蛇</p>
+		<div class="map">
+
+		</div>
+		<!--连接其他JS模块-->
+		<script src="js/Food.js"></script>
+		<script src="js/Snake.js"></script>
+		<script src="js/Game.js"></script>
+		<script type="javascript">
+			//初始化游戏对象
+			var game = new Game(document.querySelector(".map"));
+			game.init();
+		</script>
+	</body>
+
+</html>
